@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yjE-Rh-7C6">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Smart Home-->
+        <scene sceneID="wx6-TD-ue2">
+            <objects>
+                <tableViewController id="cLl-L8-PDF" customClass="DeviceListTableViewController" customModule="AddressBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="IdA-tz-Ymk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="deviceCell" rowHeight="83" id="A3S-EO-zhD" customClass="DeviceTableViewCell" customModule="AddressBook" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="83"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="A3S-EO-zhD" id="2vQ-Bv-6Ge">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(device name)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJY-0R-3hP">
+                                            <rect key="frame" x="30" y="21" width="295" height="41"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X3f-go-vXE">
+                                            <rect key="frame" x="335" y="26" width="51" height="31"/>
+                                            <connections>
+                                                <action selector="deviceSwitchToggled:" destination="A3S-EO-zhD" eventType="valueChanged" id="rMU-LI-umT"/>
+                                            </connections>
+                                        </switch>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="oJY-0R-3hP" firstAttribute="leading" secondItem="2vQ-Bv-6Ge" secondAttribute="leadingMargin" constant="10" id="1nK-jD-vqc"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="oJY-0R-3hP" secondAttribute="bottom" constant="10" id="5Hw-6Q-8dJ"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="X3f-go-vXE" secondAttribute="trailing" constant="10" id="Ig7-dh-dKI"/>
+                                        <constraint firstItem="oJY-0R-3hP" firstAttribute="top" secondItem="2vQ-Bv-6Ge" secondAttribute="topMargin" constant="10" id="eLC-2Z-ns4"/>
+                                        <constraint firstItem="X3f-go-vXE" firstAttribute="leading" secondItem="oJY-0R-3hP" secondAttribute="trailing" constant="10" id="g1d-Jl-1ga"/>
+                                        <constraint firstItem="X3f-go-vXE" firstAttribute="centerY" secondItem="2vQ-Bv-6Ge" secondAttribute="centerY" id="h1c-AB-Ijz"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="deviceNameLabel" destination="oJY-0R-3hP" id="Itf-TB-QRt"/>
+                                    <outlet property="deviceSwitch" destination="X3f-go-vXE" id="gUt-Ci-7nI"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="cLl-L8-PDF" id="Ylo-DT-04e"/>
+                            <outlet property="delegate" destination="cLl-L8-PDF" id="gye-ZY-gSq"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Smart Home" id="Ql9-Ek-erN">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="35K-ec-D1u">
+                            <connections>
+                                <action selector="addDeviceButtonTapped:" destination="cLl-L8-PDF" id="a0J-ku-26j"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jtQ-WZ-DxL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="618.84057971014499" y="109.82142857142857"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qYD-fL-PWp">
+            <objects>
+                <navigationController id="yjE-Rh-7C6" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fVy-06-PKr">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="cLl-L8-PDF" kind="relationship" relationship="rootViewController" id="mnN-lc-a6Y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TAm-HT-Pba" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-271" y="110"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

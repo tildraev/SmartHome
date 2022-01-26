@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		D28D10FA27A1DA8600F057B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28D10F927A1DA8600F057B8 /* AppDelegate.swift */; };
 		D28D10FC27A1DA8600F057B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28D10FB27A1DA8600F057B8 /* SceneDelegate.swift */; };
-		D28D10FE27A1DA8600F057B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28D10FD27A1DA8600F057B8 /* ViewController.swift */; };
 		D28D110127A1DA8600F057B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D28D10FF27A1DA8600F057B8 /* Main.storyboard */; };
 		D28D110327A1DA8800F057B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D28D110227A1DA8800F057B8 /* Assets.xcassets */; };
 		D28D110627A1DA8800F057B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D28D110427A1DA8800F057B8 /* LaunchScreen.storyboard */; };
+		D28D111427A1DBA100F057B8 /* DeviceListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28D111327A1DBA100F057B8 /* DeviceListTableViewController.swift */; };
+		D28D111627A1DBC300F057B8 /* DeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28D111527A1DBC300F057B8 /* DeviceTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D28D10F627A1DA8600F057B8 /* AddressBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AddressBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D28D10F927A1DA8600F057B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D28D10FB27A1DA8600F057B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D28D10FD27A1DA8600F057B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D28D110027A1DA8600F057B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D28D110227A1DA8800F057B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D28D110527A1DA8800F057B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D28D110727A1DA8800F057B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D28D111327A1DBA100F057B8 /* DeviceListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListTableViewController.swift; sourceTree = "<group>"; };
+		D28D111527A1DBC300F057B8 /* DeviceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +42,7 @@
 		D28D10ED27A1DA8600F057B8 = {
 			isa = PBXGroup;
 			children = (
-				D28D10F827A1DA8600F057B8 /* AddressBook */,
+				D28D10F827A1DA8600F057B8 /* SmartHome */,
 				D28D10F727A1DA8600F057B8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,18 +55,67 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D28D10F827A1DA8600F057B8 /* AddressBook */ = {
+		D28D10F827A1DA8600F057B8 /* SmartHome */ = {
+			isa = PBXGroup;
+			children = (
+				D28D111027A1DB7A00F057B8 /* Models */,
+				D28D110F27A1DB7700F057B8 /* Views */,
+				D28D110E27A1DB7100F057B8 /* Controllers */,
+				D28D110D27A1DAB800F057B8 /* Resources */,
+			);
+			path = SmartHome;
+			sourceTree = "<group>";
+		};
+		D28D110D27A1DAB800F057B8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				D28D10F927A1DA8600F057B8 /* AppDelegate.swift */,
 				D28D10FB27A1DA8600F057B8 /* SceneDelegate.swift */,
-				D28D10FD27A1DA8600F057B8 /* ViewController.swift */,
-				D28D10FF27A1DA8600F057B8 /* Main.storyboard */,
 				D28D110227A1DA8800F057B8 /* Assets.xcassets */,
 				D28D110427A1DA8800F057B8 /* LaunchScreen.storyboard */,
 				D28D110727A1DA8800F057B8 /* Info.plist */,
 			);
-			path = AddressBook;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D28D110E27A1DB7100F057B8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D28D111127A1DB8000F057B8 /* Model Controllers */,
+				D28D111227A1DB8600F057B8 /* View Controllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D28D110F27A1DB7700F057B8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D28D10FF27A1DA8600F057B8 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D28D111027A1DB7A00F057B8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D28D111127A1DB8000F057B8 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		D28D111227A1DB8600F057B8 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D28D111327A1DBA100F057B8 /* DeviceListTableViewController.swift */,
+				D28D111527A1DBC300F057B8 /* DeviceTableViewCell.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,7 +153,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D28D10F127A1DA8600F057B8 /* Build configuration list for PBXProject "AddressBook" */;
+			buildConfigurationList = D28D10F127A1DA8600F057B8 /* Build configuration list for PBXProject "SmartHome" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -138,9 +189,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D28D10FE27A1DA8600F057B8 /* ViewController.swift in Sources */,
 				D28D10FA27A1DA8600F057B8 /* AppDelegate.swift in Sources */,
+				D28D111427A1DBA100F057B8 /* DeviceListTableViewController.swift in Sources */,
 				D28D10FC27A1DA8600F057B8 /* SceneDelegate.swift in Sources */,
+				D28D111627A1DBC300F057B8 /* DeviceTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +343,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9V3Q6X8V58;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AddressBook/Info.plist;
+				INFOPLIST_FILE = SmartHome/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -319,7 +371,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9V3Q6X8V58;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AddressBook/Info.plist;
+				INFOPLIST_FILE = SmartHome/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -341,7 +393,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D28D10F127A1DA8600F057B8 /* Build configuration list for PBXProject "AddressBook" */ = {
+		D28D10F127A1DA8600F057B8 /* Build configuration list for PBXProject "SmartHome" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D28D110827A1DA8800F057B8 /* Debug */,
