@@ -14,10 +14,12 @@
 		D28D110627A1DA8800F057B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D28D110427A1DA8800F057B8 /* LaunchScreen.storyboard */; };
 		D28D111427A1DBA100F057B8 /* DeviceListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28D111327A1DBA100F057B8 /* DeviceListTableViewController.swift */; };
 		D28D111627A1DBC300F057B8 /* DeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28D111527A1DBC300F057B8 /* DeviceTableViewCell.swift */; };
+		D2FD850227A1DF2C00C505AE /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FD850127A1DF2C00C505AE /* Device.swift */; };
+		D2FD850427A1DF6E00C505AE /* DeviceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FD850327A1DF6E00C505AE /* DeviceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D28D10F627A1DA8600F057B8 /* AddressBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AddressBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D28D10F627A1DA8600F057B8 /* SmartHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D28D10F927A1DA8600F057B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D28D10FB27A1DA8600F057B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D28D110027A1DA8600F057B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -26,6 +28,8 @@
 		D28D110727A1DA8800F057B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D28D111327A1DBA100F057B8 /* DeviceListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListTableViewController.swift; sourceTree = "<group>"; };
 		D28D111527A1DBC300F057B8 /* DeviceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTableViewCell.swift; sourceTree = "<group>"; };
+		D2FD850127A1DF2C00C505AE /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		D2FD850327A1DF6E00C505AE /* DeviceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +54,7 @@
 		D28D10F727A1DA8600F057B8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D28D10F627A1DA8600F057B8 /* AddressBook.app */,
+				D28D10F627A1DA8600F057B8 /* SmartHome.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,6 +102,7 @@
 		D28D111027A1DB7A00F057B8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D2FD850127A1DF2C00C505AE /* Device.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -105,6 +110,7 @@
 		D28D111127A1DB8000F057B8 /* Model Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D2FD850327A1DF6E00C505AE /* DeviceController.swift */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -121,9 +127,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D28D10F527A1DA8600F057B8 /* AddressBook */ = {
+		D28D10F527A1DA8600F057B8 /* SmartHome */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D28D110A27A1DA8800F057B8 /* Build configuration list for PBXNativeTarget "AddressBook" */;
+			buildConfigurationList = D28D110A27A1DA8800F057B8 /* Build configuration list for PBXNativeTarget "SmartHome" */;
 			buildPhases = (
 				D28D10F227A1DA8600F057B8 /* Sources */,
 				D28D10F327A1DA8600F057B8 /* Frameworks */,
@@ -133,9 +139,9 @@
 			);
 			dependencies = (
 			);
-			name = AddressBook;
+			name = SmartHome;
 			productName = AddressBook;
-			productReference = D28D10F627A1DA8600F057B8 /* AddressBook.app */;
+			productReference = D28D10F627A1DA8600F057B8 /* SmartHome.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -166,7 +172,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D28D10F527A1DA8600F057B8 /* AddressBook */,
+				D28D10F527A1DA8600F057B8 /* SmartHome */,
 			);
 		};
 /* End PBXProject section */
@@ -192,7 +198,9 @@
 				D28D10FA27A1DA8600F057B8 /* AppDelegate.swift in Sources */,
 				D28D111427A1DBA100F057B8 /* DeviceListTableViewController.swift in Sources */,
 				D28D10FC27A1DA8600F057B8 /* SceneDelegate.swift in Sources */,
+				D2FD850427A1DF6E00C505AE /* DeviceController.swift in Sources */,
 				D28D111627A1DBC300F057B8 /* DeviceTableViewCell.swift in Sources */,
+				D2FD850227A1DF2C00C505AE /* Device.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,7 +362,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.StatefulApps.AddressBook;
+				PRODUCT_BUNDLE_IDENTIFIER = com.StatefulApps.SmartHome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -382,7 +390,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.StatefulApps.AddressBook;
+				PRODUCT_BUNDLE_IDENTIFIER = com.StatefulApps.SmartHome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -402,7 +410,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D28D110A27A1DA8800F057B8 /* Build configuration list for PBXNativeTarget "AddressBook" */ = {
+		D28D110A27A1DA8800F057B8 /* Build configuration list for PBXNativeTarget "SmartHome" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D28D110B27A1DA8800F057B8 /* Debug */,
