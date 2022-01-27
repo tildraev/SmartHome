@@ -24,8 +24,19 @@ class DeviceController {
         saveToDisk()
     }
     
+    func deleteDevice(device: Device) {
+        guard let index = devices.firstIndex(where: {$0 == device}) else { return }
+        devices.remove(at: index)
+        saveToDisk()
+    }
+    
     func toggleIsOn(device: Device){
         device.isOn.toggle()
+        saveToDisk()
+    }
+    
+    func turnOnAllDevices(isOn: Bool) {
+        devices.forEach({$0.isOn = isOn})
         saveToDisk()
     }
     

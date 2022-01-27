@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yjE-Rh-7C6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zy4-hL-cgf">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,13 +11,13 @@
         <!--Smart Home-->
         <scene sceneID="wx6-TD-ue2">
             <objects>
-                <tableViewController id="cLl-L8-PDF" customClass="DeviceListTableViewController" customModule="AddressBook" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="cLl-L8-PDF" customClass="DeviceListTableViewController" customModule="SmartHome" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="IdA-tz-Ymk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="deviceCell" rowHeight="83" id="A3S-EO-zhD" customClass="DeviceTableViewCell" customModule="AddressBook" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="deviceCell" rowHeight="83" id="A3S-EO-zhD" customClass="DeviceTableViewCell" customModule="SmartHome" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="83"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="A3S-EO-zhD" id="2vQ-Bv-6Ge">
@@ -68,10 +69,87 @@
             </objects>
             <point key="canvasLocation" x="618.84057971014499" y="109.82142857142857"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Toggle All-->
+        <scene sceneID="YZI-nS-rww">
+            <objects>
+                <viewController id="4jN-rf-zlE" customClass="ToggleAllViewController" customModule="SmartHome" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QXe-Oa-ahE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="h4I-f8-UpT">
+                                <rect key="frame" x="122.5" y="392" width="169.5" height="112"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LgY-m7-N5j">
+                                        <rect key="frame" x="0.0" y="0.0" width="169.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Toggle all devices OFF">
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="toggleAllDevicesOffButtonTapped:" destination="4jN-rf-zlE" eventType="touchUpInside" id="u5J-zA-UzJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlq-sF-Aua">
+                                        <rect key="frame" x="0.0" y="81" width="169.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Toggle all devices ON">
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="toggleAllDevicesOnButtonTapped:" destination="4jN-rf-zlE" eventType="touchUpInside" id="2Px-tb-pW2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wDd-vZ-31X"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="h4I-f8-UpT" firstAttribute="centerY" secondItem="QXe-Oa-ahE" secondAttribute="centerY" id="XG3-nY-JMz"/>
+                            <constraint firstItem="h4I-f8-UpT" firstAttribute="centerX" secondItem="QXe-Oa-ahE" secondAttribute="centerX" id="xR8-W7-Q4s"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Toggle All" image="circle" catalog="system" selectedImage="circle.fill" id="0zl-J3-FsS"/>
+                    <connections>
+                        <outlet property="toggleAllDevicesOffButton" destination="LgY-m7-N5j" id="wK7-sf-Aob"/>
+                        <outlet property="toggleAllDevicesOnButton" destination="jlq-sF-Aua" id="BLO-01-xH0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V6L-ka-NxN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-271" y="833"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="8qx-s5-v10">
+            <objects>
+                <tabBarController id="Zy4-hL-cgf" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="z6Q-66-9oQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
+                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBar>
+                    <connections>
+                        <segue destination="yjE-Rh-7C6" kind="relationship" relationship="viewControllers" id="GWh-bl-6A5"/>
+                        <segue destination="4jN-rf-zlE" kind="relationship" relationship="viewControllers" id="7hy-G0-3r7"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jMg-MR-kX1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1117" y="457"/>
+        </scene>
+        <!--Device List-->
         <scene sceneID="qYD-fL-PWp">
             <objects>
                 <navigationController id="yjE-Rh-7C6" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Device List" image="circle" catalog="system" selectedImage="circle.fill" id="7kQ-e0-PWa"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fVy-06-PKr">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -86,8 +164,16 @@
         </scene>
     </scenes>
     <resources>
+        <image name="circle" catalog="system" width="128" height="121"/>
+        <image name="circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

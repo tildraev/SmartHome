@@ -16,6 +16,7 @@
 		D28D111627A1DBC300F057B8 /* DeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28D111527A1DBC300F057B8 /* DeviceTableViewCell.swift */; };
 		D2FD850227A1DF2C00C505AE /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FD850127A1DF2C00C505AE /* Device.swift */; };
 		D2FD850427A1DF6E00C505AE /* DeviceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FD850327A1DF6E00C505AE /* DeviceController.swift */; };
+		D2FD852A27A31A0C00C505AE /* ToggleAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FD852927A31A0C00C505AE /* ToggleAllViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		D28D111527A1DBC300F057B8 /* DeviceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTableViewCell.swift; sourceTree = "<group>"; };
 		D2FD850127A1DF2C00C505AE /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		D2FD850327A1DF6E00C505AE /* DeviceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceController.swift; sourceTree = "<group>"; };
+		D2FD852927A31A0C00C505AE /* ToggleAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleAllViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 			children = (
 				D28D111327A1DBA100F057B8 /* DeviceListTableViewController.swift */,
 				D28D111527A1DBC300F057B8 /* DeviceTableViewCell.swift */,
+				D2FD852927A31A0C00C505AE /* ToggleAllViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D28D10FA27A1DA8600F057B8 /* AppDelegate.swift in Sources */,
+				D2FD852A27A31A0C00C505AE /* ToggleAllViewController.swift in Sources */,
 				D28D111427A1DBA100F057B8 /* DeviceListTableViewController.swift in Sources */,
 				D28D10FC27A1DA8600F057B8 /* SceneDelegate.swift in Sources */,
 				D2FD850427A1DF6E00C505AE /* DeviceController.swift in Sources */,

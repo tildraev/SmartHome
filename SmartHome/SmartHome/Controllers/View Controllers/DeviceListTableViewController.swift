@@ -11,6 +11,13 @@ class DeviceListTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(turnAllDevicesOff), name: TurnOffAllNotificationName, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(turnAllDevicesOn), name: TurnOnAllNotificationName, object: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
     }
 
     // MARK: - Table view data source
@@ -28,6 +35,15 @@ class DeviceListTableViewController: UITableViewController {
         cell.delegate = self
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // Delete the row from the data source
+            let device = DeviceController.sharedInstance.devices[indexPath.row]
+            DeviceController.sharedInstance.deleteDevice(device: device)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
     }
     
     func presentAlertController() {
@@ -56,9 +72,18 @@ class DeviceListTableViewController: UITableViewController {
     
     @IBAction func addDeviceButtonTapped(_ sender: Any) {
         presentAlertController()
+        
     }
     
+    @objc func turnAllDevicesOn() {
+        DeviceController.sharedInstance.turnOnAllDevices(isOn: true)
+    }
+    
+    @objc func turnAllDevicesOff() {
+        DeviceController.sharedInstance.turnOnAllDevices(isOn: false)
+    }
 }
+
 
 extension DeviceListTableViewController: DeviceTableViewCellDelegate {
     func toggleIsOn(cell: DeviceTableViewCell) {
